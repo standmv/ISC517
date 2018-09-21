@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="../static/css/form.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div class="container">
+    <div class="col-md-5">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Formulario</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sector" name="sector" placeholder="Sector" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Nivel Academico</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Seleccione</option>
+                        <option>Basico</option>
+                        <option>Medio</option>
+                        <option>Grado universitario</option>
+                        <option>Posgrado</option>
+                        <option>Doctorado</option>
+                    </select>
+
+
+                </div>
+
+                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('#characterLeft').text('140 characters left');
+        $('#message').keydown(function () {
+            var max = 140;
+            var len = $(this).val().length;
+            if (len >= max) {
+                $('#characterLeft').text('You have reached the limit');
+                $('#characterLeft').addClass('red');
+                $('#btnSubmit').addClass('disabled');
+            }
+            else {
+                var ch = max - len;
+                $('#characterLeft').text(ch + ' characters left');
+                $('#btnSubmit').removeClass('disabled');
+                $('#characterLeft').removeClass('red');
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
