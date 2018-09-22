@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# v1 - Para obligar al cambio bueno mantener una versión.
+# Esto es un comentario.
+
+#Trama que indica que
+CACHE:
+form.html
+
+NETWORK:
+
+/
+
+FALLBACK:
+
+*.html offline.html
