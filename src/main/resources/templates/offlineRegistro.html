@@ -150,6 +150,21 @@
             });
         });
     </script>
+    <style>
+        .map-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .map-responsive iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -157,9 +172,7 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-8"><h2><b>REGISTRO</b></h2></div>
-                <div class="col-sm-4">
-                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Agregar</button>
-                </div>
+
             </div>
         </div>
         <table class="table table-bordered">
@@ -169,7 +182,7 @@
                 <th>Apellido</th>
                 <th>Sector</th>
                 <th>Nivel Academico</th>
-                <th>Actions</th>
+
             </tr>
             </thead>
             <tbody>
@@ -178,27 +191,14 @@
                 <td>Marte Gomez</td>
                 <td>La Española</td>
                 <td>Universitario</td>
-                <td>
-                    <a class="add" title="Agregar" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                    <a class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Borrar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                </td>
+
             </tr>
-            <tr>
-                <td>Stanley</td>
-                <td>De Moya</td>
-                <td>Los Alamos</td>
-                <td>Universitario</td>
-                <td>
-                    <a class="add" title="Agregar" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                    <a class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Borrar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                </td>
-            </tr>
+
 
             </tbody>
         </table>
-    </div>
-</div>
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.874943465606!2d-70.68450125672683!3d19.440807210259724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1cf6e383b84a1%3A0x59c762e9ac449541!2sTaller+de+Mec%C3%A1nica+Industrial!5e0!3m2!1ses!2sdo!4v1538101544929" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
 </body>
 </html>
